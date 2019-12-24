@@ -1,0 +1,41 @@
+{
+  "name": "linting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "prettier:write": "npx prettier --write **/*.{js,ts,tsx} && npx prettier --write *.{js,ts,tsx}",
+    "lint": "tsc --noEmit && eslint --ext .js,.ts,.tsx ./app",
+    "postinstall": "jetifier -r"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-config-airbnb-typescript": "^6.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "typescript": "^3.6.4"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
